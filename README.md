@@ -26,7 +26,7 @@ The Optical Character Recognition (OCR) API provides a complete solution for tex
 This solution suits well as a basis for almost any computer vision application that aims for either all-in-one product or simple OCR goals.
 
 <div align="center">
-<img width="600" src="https://storage.googleapis.com/api4ai-static/rapidapi/ocr_1.png"/>
+<img width="600" src="https://storage.googleapis.com/api4ai-static/visuals/ocr_1.png"/>
 </div>
 
 
