@@ -1,6 +1,6 @@
 # API4AI OCR text recognition sample
 
-This directory contains a minimalistic sample that sends requests to the API4AI OCR text recognition API.
+This directory contains a minimalistic sample that sends requests to the API4AI Text Recognition API.
 The sample is implemented in  `python` using [aiohttp](https://pypi.org/project/aiohttp/) module.
 
 
