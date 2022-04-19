@@ -1,6 +1,6 @@
-# API4AI OCR text recognition
+# API4AI OCR text recognition sample
 
-This directory contains a minimalistic sample that sends requests to the API4AI Brand Recognition API.
+This directory contains a minimalistic sample that sends requests to the API4AI Text Recognition API.
 The sample is implemented in `python` using [requests](https://pypi.org/project/requests/) module.
 
 
