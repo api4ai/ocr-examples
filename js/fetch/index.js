@@ -59,13 +59,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
         raw.textContent = JSON.stringify(response, undefined, 2)
         sectionRaw.hidden = false
         // Parse response and print recognized text.
-        var textContent = ''
-        for (var i in response.results) {
-          var result = response.results[i]
-          var page_tip = ''
-          if (result.hasOwnProperty('page')) {
-            page_tip = ` on page ${result.page}`
-          }
+        let textContent = ''
+        for (const i in response.results) {
+          const result = response.results[i]
           const text = result.entities[0].objects[0].entities[0].text
           textContent += text + '\n'
         }

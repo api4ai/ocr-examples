@@ -57,13 +57,13 @@ axios.post(OPTIONS[MODE].url, form, { headers })
     // Print raw response.
     console.log(`💬 Raw response:\n${JSON.stringify(response.data)}\n`)
     // Parse response and print recognized text.
-    for (var i in response.data.results) {
-      var result = response.data.results[i]
-      var page_tip = ''
-      if (result.hasOwnProperty('page')) {
-        page_tip = ` on page ${result.page}`
+    for (const i in response.data.results) {
+      const result = response.data.results[i]
+      let pageTip = ''
+      if (Object.hasOwn(result, 'page')) {
+        pageTip = ` on page ${result.page}`
       }
       const text = result.entities[0].objects[0].entities[0].text
-      console.log(`💬 Recognized text${page_tip}:\n${text}\n`)
+      console.log(`💬 Recognized text${pageTip}:\n${text}\n`)
     }
   })
