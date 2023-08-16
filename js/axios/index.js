@@ -54,8 +54,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
         raw.textContent = JSON.stringify(response.data, undefined, 2)
         sectionRaw.hidden = false
         // Parse response and print recognized text.
-        const text = response.data.results[0].entities[0].objects[0].entities[0].text
-        parsed.textContent = text
+        var textContent = ''
+        for (var i in response.data.results) {
+          var result = response.data.results[i]
+          var page_tip = ''
+          if (result.hasOwnProperty('page')) {
+            page_tip = ` on page ${result.page}`
+          }
+          const text = result.entities[0].objects[0].entities[0].text
+          textContent += text + '\n'
+        }
+        parsed.textContent = textContent
         sectionParsed.hidden = false
       })
       .catch(function (error) {

@@ -25,6 +25,12 @@ Try sample with your local image:
 php index.php image.jpg
 ```
 
+Try sample with your local pdf document:
+
+```bash
+php index.php doc.pdf
+```
+
 
 ## About API keys
 

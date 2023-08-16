@@ -23,6 +23,12 @@ Try sample with your local image:
 bash sample.sh image.jpg
 ```
 
+Try sample with your pdf document:
+
+```bash
+bash sample.sh doc.pdf
+```
+
 Try sample and parse with `jq` tool (note: you may need to install [jq](https://stedolan.github.io/jq/) separately) for pretty formatted output:
 
 ```bash

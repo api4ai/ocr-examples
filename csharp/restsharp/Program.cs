@@ -61,7 +61,12 @@ Console.WriteLine($"[i] Raw response:\n{jsonResponse}\n");
 
 // Parse response and print recognized text.
 JsonNode docRoot = JsonNode.Parse(jsonResponse)!.Root;
-String text = (String)docRoot["results"]![0]!["entities"]![0]!["objects"]![0]!["entities"]![0]!["text"]!;
-Console.WriteLine($"[i] Recognized text:\n{text}");
+JsonArray results = docRoot["results"].AsArray();
+foreach (JsonObject result in results) {
+    String text = (String)result!["entities"]![0]!["objects"]![0]!["entities"]![0]!["text"]!;
+    bool has_page = result.ContainsKey("page");
+    String page_tip = has_page ? $" on page {(int)result!["page"]}" : "";
+    Console.WriteLine($"[i] Recognized text{page_tip}:\n{text}\n");
+}
 
 return 0;

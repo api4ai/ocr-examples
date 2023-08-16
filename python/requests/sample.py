@@ -57,6 +57,12 @@ if __name__ == '__main__':
     # Print raw response.
     print(f'💬 Raw response:\n{response.text}\n')
 
-    # # Parse response and print recognized text.
-    text = response.json()['results'][0]['entities'][0]['objects'][0]['entities'][0]['text']
-    print(f'💬 Recognized text:\n{text}')
+    # Parse response and print recognized text.
+    results = response.json()['results']
+    for result in results:
+        text = result['entities'][0]['objects'][0]['entities'][0]['text']
+        page_tip = ''
+        if 'page' in result:
+            page = result['page']
+            page_tip = f' on page {page}'
+        print(f'💬 Recognized text{page_tip}:\n{text}\n')

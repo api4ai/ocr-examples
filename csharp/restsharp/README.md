@@ -28,6 +28,12 @@ Try sample with your local image:
 dotnet run -- image.jpg
 ```
 
+Try sample with your local pdf document:
+
+```bash
+dotnet run -- doc.pdf
+```
+
 
 ## About API keys
 

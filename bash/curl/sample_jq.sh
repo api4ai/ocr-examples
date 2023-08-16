@@ -18,4 +18,4 @@ echo ""
 
 # Parse response and print recognized text.
 echo "💬 Recognized text:"
-jq -r ".results[0].entities[0].objects[0].entities[0].text" <<< ${raw_response}
+jq -r ".results[].entities[0].objects[0].entities[0].text" <<< ${raw_response}

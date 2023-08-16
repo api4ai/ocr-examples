@@ -56,9 +56,15 @@ async def main():
         # Print raw response.
         print(f'💬 Raw response:\n{resp_text}\n')
 
-        # # Parse response and print recognized text.
-        text = resp_json['results'][0]['entities'][0]['objects'][0]['entities'][0]['text']
-        print(f'💬 Recognized text:\n{text}')
+        # Parse response and print recognized text.
+        results = resp_json['results']
+        for result in results:
+            text = result['entities'][0]['objects'][0]['entities'][0]['text']
+            page_tip = ''
+            if 'page' in result:
+                page = result['page']
+                page_tip = f' on page {page}'
+            print(f'💬 Recognized text{page_tip}:\n{text}\n')
 
 
 if __name__ == '__main__':

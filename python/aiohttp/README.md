@@ -29,6 +29,12 @@ Try sample with your local image:
 python3 sample.py image.jpg
 ```
 
+Try sample with your local pdf document:
+
+```bash
+python3 sample.py doc.pdf
+```
+
 
 ## About API keys
 

@@ -50,6 +50,7 @@ curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
 
 // Execute request.
 $result = curl_exec($request);
+curl_close($request);
 
 // Decode response.
 $raw_response = json_decode($result, true);
@@ -61,14 +62,21 @@ echo join('',
            "\n"]);
 
 // Parse response and get recognized text.
-$text = $raw_response['results'][0]['entities'][0]['objects'][0]['entities'][0]['text'];
+foreach ($raw_response['results'] as &$result) {
+    $text = $result['entities'][0]['objects'][0]['entities'][0]['text'];
 
-// Close request session.
-curl_close($request);
+    $page_tip = '';
+    if (array_key_exists('page', $result)) {
+        $page_tip = ' on page ' . $result['page'];
+    }
 
-// Print recognized text.
-echo join('',
-          ["\n💬 Recognized text: \n",
-           $text,
-           "\n"]);
+    // Print recognized text.
+    echo join('',
+              ["\n💬 Recognized text",
+               $page_tip,
+               ":\n",
+               $text,
+               "\n"]);
+}
+
 ?>

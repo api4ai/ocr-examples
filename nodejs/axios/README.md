@@ -31,6 +31,12 @@ Try sample with your local image:
 node index.js image.jpg
 ```
 
+Try sample with your local pdf document:
+
+```bash
+node index.js doc.pdf
+```
+
 
 ## About API keys
 

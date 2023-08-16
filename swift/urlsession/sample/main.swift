@@ -86,19 +86,23 @@ let dataTask = session.dataTask(with: request, completionHandler: { (data, respo
             let raw = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             print("💬 Raw response:\n\(raw ?? "")\n")
 
-            // Try to parse result from response data as JSON.
+            // Parse and print.
             let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
-            let result = (json["results"] as! [[String:Any]])[0]
+            for result in json["results"] as! [[String:Any]] {
+                let status = result["status"] as! [String:String]
+                if (status["code"] == "ok") {
+                    var page_tip = "";
+                    let page = result["page"];
+                    if (page != nil) {
+                        page_tip = " on page \(page!)"
+                    }
 
-            // Parse and pring status.
-            let status = result["status"] as! [String:String]
-            if (status["code"] == "ok") {
-                // Parse data.
-                print("💬 Recognized text:")
-                let entity = (result["entities"] as! [[String:Any]])[0]
-                let object = (entity["objects"] as! [[String:Any]])[0]
-                let text = (object["entities"] as! [[String:String]])[0]["text"]
-                print(text ?? "")
+                    print("💬 Recognized text\(page_tip):")
+                    let entity = (result["entities"] as! [[String:Any]])[0]
+                    let object = (entity["objects"] as! [[String:Any]])[0]
+                    let text = (object["entities"] as! [[String:String]])[0]["text"]
+                    print((text ?? "") + "\n")
+                }
             }
         } catch {
             print(error)

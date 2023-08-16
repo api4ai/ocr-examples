@@ -35,6 +35,12 @@ Try sample with your local image:
 ./build/Release/sample image.jpg
 ```
 
+Try sample with your local pdf document:
+
+```bash
+./build/Release/sample doc.pdf
+```
+
 
 ## About API keys
 
