@@ -1,7 +1,7 @@
 # API4AI Samples: Text Recognition
 
 <div align="center">
-<a target="_blank" href="https://api4.ai?utm_source=ocr_example_repo&utm_medium=readme&utm_campaign=examples"><img src="https://storage.googleapis.com/api4ai-static/logo/a4a-logo-horizontal-gradient-rectangular-bg-round-glow-small-550.png"/></a>
+<a target="_blank" href="https://api4.ai?utm_source=ocr_example_repo&utm_medium=readme&utm_campaign=examples"><img src="https://static.api4.ai/logo/a4a-logo-horizontal-gradient-rectangular-bg-round-glow-small-550.png"/></a>
 </div>
 
 
@@ -26,7 +26,7 @@ The Optical Character Recognition (OCR) API provides a complete solution for tex
 This solution suits well as a basis for almost any computer vision application that aims for either all-in-one product or simple OCR goals.
 
 <div align="center">
-<img width="600" src="https://storage.googleapis.com/api4ai-static/visuals/ocr_1.png"/>
+<img width="600" src="https://static.api4.ai/visuals/ocr_1.png"/>
 </div>
 
 
