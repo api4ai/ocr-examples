@@ -1,13 +1,13 @@
 # API4AI Samples: Text Recognition
 
 <div align="center">
-<a target="_blank" href="https://api4.ai"><img src="https://static.api4.ai/logo/a4a-logo-horizontal-gradient-rectangular-bg-round-glow-small-550.png"/></a>
+<a target="_blank" href="https://api4.ai?utm_source=example-repo&utm_medium=referral&utm_campaign=ocr"><img src="https://static.api4.ai/logo/a4a-logo-horizontal-gradient-rectangular-bg-round-glow-small-550.png"/></a>
 </div>
 
 
 <div align="center">
 <a target="_blank" href="https://rapidapi.com/api4ai-api4ai-default/api/ocr43/details"><img src="https://img.shields.io/badge/View%20on%20RapidAPI-gray?logo=octopusdeploy&style=for-the-badge"/></a>
-<a target="_blank" href="https://api4.ai/apis/ocr"><img src="https://img.shields.io/badge/api4.ai%20platform-fee33c?style=for-the-badge&logo=icloud&logoColor=black"/></a>
+<a target="_blank" href="https://api4.ai/apis/ocr?utm_source=example-repo&utm_medium=referral&utm_campaign=ocr"><img src="https://img.shields.io/badge/api4.ai%20platform-fee33c?style=for-the-badge&logo=icloud&logoColor=black"/></a>
 <a target="_blank" href="https://t.me/a4a_ocr_bot"><img src="https://img.shields.io/badge/-Telegram%20demo-ddd?logo=telegram&style=for-the-badge"/></a>
 <br><br>
 <a target="_blank" href="https://www.instagram.com/api4ai"><img src="https://img.shields.io/badge/instagram--blue?style=social&logo=instagram"/></a>
@@ -55,8 +55,8 @@ This project run to help API users with ready-to-use examples in a set of the mo
 
 ## 🔗 Links
 
-* Sign up at [API4AI Developer Portal](https://portal.api4.ai)
-* Learn more about API at [api4.ai](https://api4.ai/docs/ocr)
+* Sign up at [API4AI Developer Portal](https://portal.api4.ai?utm_source=example-repo&utm_medium=referral&utm_campaign=ocr)
+* Learn more about API at [api4.ai](https://api4.ai/docs/ocr?utm_source=example-repo&utm_medium=referral&utm_campaign=ocr)
 * Try API via [🤖 telegram demo bot](https://t.me/a4a_ocr_bot)
 * View API on [RapidAPI marketplace](https://rapidapi.com/api4ai-api4ai-default/api/ocr43/details)
 
